@@ -14,7 +14,7 @@ In order to run OpenStack (Fep) based laboratories, you need to create a new Vir
   * Go to the Instances page
   * Click the ***Launch Instance*** button
   * Fill in the instance name
-  * On the `Source` page, select `RL 2019`
+  * On the `Source` page, select `RL 2018`
   * On the `Flavor` page, select `m1.small`
   * On the `Key Pair` page, select your assigned key pair
   * Hit `Launch Instance`
