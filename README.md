@@ -56,8 +56,11 @@ Now that you're in `byobu`, run the following key combinations to split your ter
 For a quick start, run the following key combinations:
 
 <kbd>Ctrl</kbd>+<kbd>F2</kbd>
+
 <kbd>Shift</kbd>+<kbd>F2</kbd>
+
 <kbd>Shift</kbd>+<kbd>F2</kbd>
+
 <kbd>Shift</kbd>+<kbd>F2</kbd>
 
 This will split your screen like so:
