@@ -38,13 +38,27 @@ ssh student@YOUR.VM.IP.ADDRESS
 
 ✨ Now you're ready to start the laboratory. ✨ 
 
+### 🔧 Lab setup script
+
+Before every laboratory, you have to run a certain `prepare script`. Look into the laboratory description for the exact commands.
+
+It's going to look something like this:
+
+```
+root@YOUR.VM.IP.ADDRESS:~# wget https://raw.github.com/RL-UPB/rl-lab-prepare/master/rl-lab-X-prepare
+root@YOUR.VM.IP.ADDRESS:~# chmod +x rl-lab-X-prepare
+root@YOUR.VM.IP.ADDRESS:~# ./rl-lab-X-prepare
+```
+
+> ⚠ Remember, you have to run the above commands ***as root** on your VM.
+
 ### ✂ Splitting the screen
 
 For a more efficient workflow, use [`byobu`](https://byobu.org/) to split the terminal:
 
-```bash
-student@YOUR.VM.IP.ADDRESS$ sudo su # su as root for easier future commands
-root@YOUR.VM.IP.ADDRESS$ byobu # enter byobu
+```
+student@YOUR.VM.IP.ADDRESS:~$ sudo su // su as root for easier future commands
+root@YOUR.VM.IP.ADDRESS:~# byobu // enter byobu
 ```
 
 Now that you're in `byobu`, run the following key combinations to split your terminal:
