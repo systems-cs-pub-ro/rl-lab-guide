@@ -148,7 +148,7 @@ Currently you cannot install Docker directly into WSL, so we need to install it 
 > 
 > If you have VirtualBox or VMWare installed, remove them before continuing. You can learn how to [migrate VirtualBox VMs to HyperV here.](https://www.groovypost.com/howto/migrate-virtual-box-vms-windows-10-hyper-v/)
 
-1. 📩 [Download it and run the installer from here.]()
+1. 📩 [Download it and run the installer from here.](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
 2. 🚪 Allow the Docker service to be accessed from localhost
 
