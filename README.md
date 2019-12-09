@@ -112,8 +112,6 @@ Which you can set up to look like this:
 
 ## 🐧🐳 WSL Setup for Dockers
 
-### ⏹ Windows with WSL
-
 If you are using Windows as your primary operating System, you can use the Windows Subsystem for Linux (or WSL) to run Linux applications. In this way, you do not need to dual-boot with Linux anymore.
 
 #### 🚚 Installing WSL
@@ -164,9 +162,18 @@ Currently you cannot install Docker directly into WSL, so we need to install it 
 
     Run the following commands to install the required packages:
 
-    ```
-    
+    ```bash
+    wget https://github.com/systems-cs-pub-ro/rl-lab-guide/blob/master/scripts/wslDockerInstall.sh
+    chmod +x wslDockerInstall.sh
+    ./wslDockerInstall.sh
     ```
 
 ### 🐧 Linux
-TODO
+
+If you're running Linux, run the following commands:
+
+```bash
+wget https://github.com/systems-cs-pub-ro/rl-lab-guide/blob/master/scripts/linuxDockerInstall.sh
+chmod +x linuxDockerInstall.sh
+./linuxDockerInstall.sh
+```
