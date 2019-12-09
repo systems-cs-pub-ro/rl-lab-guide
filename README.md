@@ -172,7 +172,8 @@ Currently you cannot install Docker directly into WSL, so we need to install it 
     ```
 
 
-### 🏠 If you are using Windows 10 Home Edition 🏠
+<details>
+<summary> 🏠 If you are using Windows 10 Home Edition 🏠</summary>
 
 Windows 10 Home Edition *does not support HyperV*. It instead uses a VirtualBox machine to set up the Docker service. Due to this reason, you will **not** use WSL, but instead run your code directly on the provided VirtualBox VM.
 
@@ -192,6 +193,7 @@ If you have this version of Windows, you have to run these steps instead:
 
 3. ✅ Done. You can now run docker commands here.
 
+</details>
 
 ### 🐧 Linux
 
