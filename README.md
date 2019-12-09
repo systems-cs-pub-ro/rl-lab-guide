@@ -148,9 +148,10 @@ Currently you cannot install Docker directly into WSL, so we need to install it 
 > 
 > If you have VirtualBox or VMWare installed, remove them before continuing. You can learn how to [migrate VirtualBox VMs to HyperV here.](https://www.groovypost.com/howto/migrate-virtual-box-vms-windows-10-hyper-v/)
 
+
 1. 📩 [Download and run the installer from here.](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 
-2. 🚪 Allow the Docker service to be accessed from localhost
+2. 🚪 Allow the Docker service to be accessed from `localhost`
 
     Access the Docker for Windows control panel. Open its settings and look for an option called:
 
@@ -163,17 +164,34 @@ Currently you cannot install Docker directly into WSL, so we need to install it 
     Run the following commands to install the required packages:
 
     ```bash
-    wget https://github.com/systems-cs-pub-ro/rl-lab-guide/blob/master/scripts/wslDockerInstall.sh
+    wget https://raw.githubusercontent.com/systems-cs-pub-ro/rl-lab-guide/master/scripts/wslDockerInstall.sh
     chmod +x wslDockerInstall.sh
     ./wslDockerInstall.sh
     ```
+
+
+### 🏠 If you are using Windows 10 Home Edition 🏠
+
+Windows 10 Home Edition *does not support HyperV*. If you have this version of Windows, you have to run these steps instead:
+
+1. 📩 Download and install [Docker Toolbox](https://github.com/docker/toolbox/releases/download/v19.03.1/DockerToolbox-19.03.1.exe)
+
+2. 🚪 Allow the Docker service to be accessed from `localhost`
+
+  Open the `Docker Quickstart Terminal` and run the following command:
+
+  ```
+  ```
+
+
+
 
 ### 🐧 Linux
 
 If you're running Linux, run the following commands:
 
 ```bash
-wget https://github.com/systems-cs-pub-ro/rl-lab-guide/blob/master/scripts/linuxDockerInstall.sh
+wget https://raw.githubusercontent.com/systems-cs-pub-ro/rl-lab-guide/master/scripts/linuxDockerInstall.sh
 chmod +x linuxDockerInstall.sh
 ./linuxDockerInstall.sh
 ```
