@@ -25,31 +25,31 @@ sudo apt-key fingerprint 0EBFCD88
 # If you want to live on the edge, you can change "stable" below to "test" or
 # "nightly". I highly recommend sticking with stable!
 
-echo "📦 Adding the stable channel docker repo..."
+echo "[🐿 RL]: 📦 Adding the stable channel docker repo..."
 sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
    $(lsb_release -cs) \
    stable" > wsl.log
 
 # Update the apt package list (for the new apt repo).
-echo "🔄 Updating the package list once again..."
+echo "[🐿 RL]: 🔄 Updating the package list once again..."
 sudo apt-get update -y > wsl.log
 
 # Install the latest version of Docker CE.
-echo "🐋 Installing the latest version of Docker CE..."
+echo "[🐿 RL]: 🐋 Installing the latest version of Docker CE..."
 sudo apt-get install -y docker-ce > wsl.log
 
 # Allow your user to access the Docker CLI without needing root access.
-echo "🔑 Granting your user rights for the Docker CLI..."
+echo "[🐿 RL]: 🔑 Granting your user rights for the Docker CLI..."
 sudo usermod -aG docker $USER > wsl.log
 
-echo "🐍 Installing Python and PIP (needed for docker-compose)..."
+echo "[🐿 RL]: 🐍 Installing Python and PIP (needed for docker-compose)..."
 sudo apt-get install -y python python-pip > wsl.log
 
-echo "🏗 Installing docker-compose..."
+echo "[🐿 RL]: 🏗 Installing docker-compose..."
 pip install --user docker-compose > wsl.log
 
-echo "📻 Setting up Docker to connect to the Windows server..."
+echo "[🐿 RL]: 📻 Setting up Docker to connect to the Windows server..."
 echo "export DOCKER_HOST=tcp://localhost:2375" >> ~/.bashrc && source ~/.bashrc > wsl.log
 
 echo "✅ Done!"
