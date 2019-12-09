@@ -174,18 +174,23 @@ Currently you cannot install Docker directly into WSL, so we need to install it 
 
 ### 🏠 If you are using Windows 10 Home Edition 🏠
 
-Windows 10 Home Edition *does not support HyperV*. If you have this version of Windows, you have to run these steps instead:
+Windows 10 Home Edition *does not support HyperV*. It instead uses a VirtualBox machine to set up the Docker service. Due to this reason, you will **not** use WSL, but instead run your code directly on the provided VirtualBox VM.
+
+The downside of this is that you are very limited in what you can do with the VM. For example, sharing files between the VM and your machine is very cumbersome.
+
+If you have this version of Windows, you have to run these steps instead:
 
 1. 📩 Download and install [Docker Toolbox](https://github.com/docker/toolbox/releases/download/v19.03.1/DockerToolbox-19.03.1.exe)
 
 2. 🚪 Allow the Docker service to be accessed from `localhost`
 
-  Open the `Docker Quickstart Terminal` and run the following command:
+    Open the `Docker Quickstart Terminal` and run the following command:
 
-  ```
-  ```
+    ```
+    docker-machine ssh
+    ```
 
-
+3. ✅ Done. You can now run docker commands here.
 
 
 ### 🐧 Linux
@@ -197,3 +202,24 @@ wget https://raw.githubusercontent.com/systems-cs-pub-ro/rl-lab-guide/master/scr
 chmod +x linuxDockerInstall.sh
 ./linuxDockerInstall.sh
 ```
+
+## 💡 WSL and Windows Terminal Tips
+
+This list is a work in progress collection of various useful tips and tricks that will help you make the most of the Windows Subsystem for Linux and Windows Terminal.
+
+* 📁 Accessing WSL files from Windows
+
+  Usually the files in your WSL instance are completely separated from the ones in your Windows machine. In order to access your files, you can open an `explorer.exe` window from anywhere within WSL:
+
+  ```
+  cd ~
+  explorer.exe .
+  ```
+
+* ✂ Splitting the terminal in Windows Terminal
+
+  Starting with version `0.7` of the Windows Terminal, you can split the terminal window just like in `byobu`. The shortcuts for this are:
+
+  * ↔ Horizontal split - <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>+</kbd>
+  * ↕ Vertical split - <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>-</kbd>
+
