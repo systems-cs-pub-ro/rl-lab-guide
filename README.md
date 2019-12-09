@@ -137,9 +137,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 Currently you cannot install Docker directly into WSL, so we need to install it into Windows, and then control it from Ubuntu. The gist of it looks something like this:
 
 ```
-    ⏹ Windows                      🐧 WSL
- ------------------         -------------------
- 🐳 Docker Service  ◀----▶   🐋 Docker Client
+    ⏹ Windows                     🐧 WSL
+ ------------------           -------------------
+ 🐳 Docker Service  ◀----▶     🐋 Docker Client
 ```
 
 ##### 🐳 Installing the Windows Docker Service
