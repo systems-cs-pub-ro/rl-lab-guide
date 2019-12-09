@@ -112,7 +112,7 @@ Which you can set up to look like this:
 
 ## 🐧🐳 WSL Setup for Dockers
 
-If you are using Windows as your primary operating System, you can use the Windows Subsystem for Linux (or WSL) to run Linux applications. In this way, you do not need to dual-boot with Linux anymore.
+If you are using Windows as your primary operating system, you can use the Windows Subsystem for Linux (or WSL) to run Linux applications. In this way, you do not need to dual-boot with Linux anymore.
 
 #### 🚚 Installing WSL
 
