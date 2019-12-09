@@ -130,6 +130,8 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 4. 🐧 Install a Linux distribution from the Microsoft Store. A good starting point is the [Ubuntu](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q) distribution. Select Get on the page that opens.
 5. 🚀 Launch the `Ubuntu` shortcut and follow the steps to finish configuring WSL.
 
+> 💡 For a better experience you can also [install the Windows Terminal Preview from here](https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701).
+
 #### 🐳 Installing Docker
 
 Currently you cannot install Docker directly into WSL, so we need to install it into Windows, and then control it from Ubuntu. The gist of it looks something like this:
