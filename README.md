@@ -2,8 +2,12 @@
 
 This repository contains various useful tips and tricks for the RL Laboratory, but also general useful stuff.
 
-
 ## 🧪 Connecting to OpenStack VMs
+
+<details>
+<summary>
+🔽 Expand instructions
+</summary>
 
 ### ✨ Creating a new VM
   
@@ -104,7 +108,64 @@ Which you can set up to look like this:
               |      🔵 blue
 ---------------------------------
 ```
+</details>
 
 ## 🐧🐳 WSL Setup for Dockers
 
-TODO
+### ⏹ Windows with WSL
+
+If you are using Windows as your primary operating System, you can use the Windows Subsystem for Linux (or WSL) to run Linux applications. In this way, you do not need to dual-boot with Linux anymore.
+
+#### 🚚 Installing WSL
+
+In order to install WSL, you can follow the steps outlined [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10). The gist of it is this:
+
+1. 🌟 Right-click the Start Menu and select Windows PowerShell (Admin)
+    * If you do not have this option in the start menu, search for PowerShell, right click its icon and select `Run as Administrator`
+2. 📋 In the PowerShell window, paste the following command:
+
+```PowerShell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
+3. 🔁 Restart your computer. After this, you now have WSL installed, but you also need to install a Linux distribution.
+4. 🐧 Install a Linux distribution from the Microsoft Store. A good starting point is the [Ubuntu](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q) distribution. Select Get on the page that opens.
+5. 🚀 Launch the `Ubuntu` shortcut and follow the steps to finish configuring WSL.
+
+#### 🐳 Installing Docker
+
+Currently you cannot install Docker directly into WSL, so we need to install it into Windows, and then control it from Ubuntu. The gist of it looks something like this:
+
+```
+    ⏹ Windows                      🐧 WSL
+ ------------------         -------------------
+ 🐳 Docker Service  ◀----▶   🐋 Docker Client
+```
+
+##### 🐳 Installing the Windows Docker Service
+
+> ## ⚠ A note regarding VirtualBox / VMWare ⚠
+> 
+> Docker for Windows depends on a system called [HyperV](https://en.wikipedia.org/wiki/Hyper-V). This is a Virtual Machine system similar to VirtualBox or VMWare. Due to this reason, they cannot be installed and running at the same time.
+> 
+> If you have VirtualBox or VMWare installed, remove them before continuing. You can learn how to [migrate VirtualBox VMs to HyperV here.](https://www.groovypost.com/howto/migrate-virtual-box-vms-windows-10-hyper-v/)
+
+1. 📩 [Download it and run the installer from here.]()
+
+2. 🚪 Allow the Docker service to be accessed from localhost
+
+    Access the Docker for Windows control panel. Open its settings and look for an option called:
+
+    > Expose daemon on tcp://localhost:2375 without TLS
+
+    This will allow our WSL client to connect to the Docker service.
+
+3. 🐋 Install the Docker client in WSL
+
+    Run the following commands to install the required packages:
+
+    ```
+    
+    ```
+
+### 🐧 Linux
